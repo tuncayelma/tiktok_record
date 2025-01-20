@@ -30,6 +30,15 @@ jobs:
   
         - name: Create user folders
           run: mkdir -p $GITHUB_WORKSPACE/VIDEOS
+
+        - name: Install OpenVPN and Connect to VPN
+          run:  |
+              sudo apt install -y openvpn openvpn-systemd-resolved
+              
+        - name: Connect to VPN
+          uses: "kota65535/github-openvpn-connect-action@v2"
+          with:
+            config_file: newuser.ovpn
   
         - name: Run Selenium script
           run: python src/main.py -user vuson389 -output VIDEOS
