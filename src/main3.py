@@ -42,7 +42,7 @@ def main():
     output = args.username
       
     url = "https://raw.githubusercontent.com/anisidina29/tiktok-live-recorder/main/usernames.txt"
-    output_file = "usernames.txt"
+    output_file = "./tiktok-live-recorder/src/usernames.txt"
   
     response = requests.get(url)
     
@@ -54,7 +54,7 @@ def main():
         print(f"Failed to download file. Status code: {response.status_code}")
         
     # Đọc usernames từ file TXT
-    usernames = load_usernames('usernames.txt')
+    usernames = load_usernames(output_file)
     
     # Chia usernames thành 10 danh sách
     username_lists = split_usernames(usernames)
