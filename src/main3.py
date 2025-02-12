@@ -19,7 +19,7 @@ def parse_args():
 
 # Hàm để chạy lệnh bên ngoài
 def run_command(username, output):
-    command = f"python3 ./tiktok-live-recorder/src/main.py  -user {username} -mode automatic -output {output} g"
+    command = f"python3 anisidina29/tiktok_record/src/main.py  -user {username} -mode automatic -output {output}"
     try:
         result = subprocess.run(command, shell=True, capture_output=True, text=True, check=True)
         print(result.stdout)
@@ -42,7 +42,7 @@ def main():
     output = args.username
       
     url = "https://raw.githubusercontent.com/anisidina29/tiktok-live-recorder/main/usernames.txt"
-    output_file = "./tiktok-live-recorder/src/usernames.txt"
+    output_file = "anisidina29/tiktok_record/src/usernames.txt"
   
     response = requests.get(url)
     
