@@ -36,7 +36,7 @@ jobs:
         run: echo "Workflow started at $(TZ='Asia/Ho_Chi_Minh' date)"
         
       - name: Install dependencies
-        run: pip install -r anisidina29/tiktok_record/src/requirements.txt
+        run: pip install -r ./src/requirements.txt
 
       - name: Update and upgrade packages
         run: sudo apt-get update && sudo apt-get upgrade -y
