@@ -48,7 +48,7 @@ jobs:
         run: mkdir -p $GITHUB_WORKSPACE/${{ matrix.usersname }}
 
       - name: Run Selenium script
-        run: python anisidina29/tiktok_record/src/main3.py -username ${{ matrix.usersname }}
+        run: python ./src/main3.py -username ${{ matrix.usersname }}
       - name: Archive screenshots
         uses: actions/upload-artifact@v4
         if: always()
