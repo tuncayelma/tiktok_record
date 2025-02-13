@@ -15,14 +15,14 @@ jobs:
       matrix:
         usersname:
           - "usernames1"
-          #- "usernames2"
-          #- "usernames3"
-          #- "usernames4"
-          #- "usernames5"
-          #- "usernames6"
-          #- "usernames7"
-          #- "usernames8"
-          #- "usernames9"
+          - "usernames2"
+          - "usernames3"
+          - "usernames4"
+          - "usernames5"
+          - "usernames6"
+          - "usernames7"
+          - "usernames8"
+          - "usernames9"
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
