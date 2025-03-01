@@ -21,7 +21,7 @@ jobs:
           - "usernames6"
           - "usernames7"
           - "usernames8"
-
+          - "usernames9"
     
     steps:
       - name: Checkout code
@@ -36,7 +36,7 @@ jobs:
         run: echo "Workflow started at $(TZ='Asia/Ho_Chi_Minh' date)"
         
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: pip install -r ./src/requirements.txt
 
       - name: Update and upgrade packages
         run: sudo apt-get update && sudo apt-get upgrade -y
@@ -48,7 +48,7 @@ jobs:
         run: mkdir -p $GITHUB_WORKSPACE/${{ matrix.usersname }}
 
       - name: Run Selenium script
-        run: python main3.py -username ${{ matrix.usersname }}
+        run: python ./src/main3.py -username ${{ matrix.usersname }}
       - name: Archive screenshots
         uses: actions/upload-artifact@v4
         if: always()
