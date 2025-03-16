@@ -65,15 +65,15 @@ def main():
     #url = "https://raw.githubusercontent.com/anisidina29/tiktok-live-recorder/main/usernames.txt"
     output_file = "./src/usernames.txt"
 
-    response = requests.get(url)
+    # response = requests.get(url)
     
-    if response.status_code == 200:
-        with open(output_file, "w", encoding="utf-8") as file:
-            file.write(response.text)
-        print(f"File downloaded successfully and saved as {output_file}")
-    else:
-        print(f"Failed to download file. Status code: {response.status_code}")
-        sys.exit(1)
+    # if response.status_code == 200:
+    #     with open(output_file, "w", encoding="utf-8") as file:
+    #         file.write(response.text)
+    #     print(f"File downloaded successfully and saved as {output_file}")
+    # else:
+    #     print(f"Failed to download file. Status code: {response.status_code}")
+    #     sys.exit(1)
 
     # Đọc usernames từ file TXT
     usernames = load_usernames(output_file)
