@@ -50,7 +50,7 @@ def run_command(username, output):
 
 # Đọc usernames từ file TXT
 def load_usernames(file_path):
-    with open(file_path, 'r', encoding="utf-8") as file:
+    with open(file_path, 'r') as file:
         usernames = [line.strip() for line in file if line.strip()]
     return usernames
 
@@ -62,7 +62,7 @@ def main():
     args = parse_args()
     output = args.username
     
-    url = "https://raw.githubusercontent.com/anisidina29/tiktok-live-recorder/main/usernames.txt"
+    #url = "https://raw.githubusercontent.com/anisidina29/tiktok-live-recorder/main/usernames.txt"
     output_file = "./src/usernames.txt"
 
     response = requests.get(url)
