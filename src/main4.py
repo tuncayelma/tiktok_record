@@ -49,11 +49,20 @@ def run_command(username, output):
     except Exception as e:
         print(f"Lỗi khi chạy lệnh cho {username}: {str(e)}")
 
-# Đọc usernames từ file TXT
+# # Đọc usernames từ file TXT
+# def load_usernames(file_path):
+#     with open(file_path, 'r', encoding="utf-8") as file:
+#         usernames = [line.strip() for line in file if line.strip()]
+#     return usernames
+
 def load_usernames(file_path):
-    with open(file_path, 'r', encoding="utf-8") as file:
+    with open(file_path, 'r') as file:
         usernames = [line.strip() for line in file if line.strip()]
     return usernames
+
+# Chia usernames thành 10 danh sách dựa trên tên danh sách
+def split_usernames(usernames, num_lists=10):
+    return [usernames[i::num_lists] for i in range(num_lists)]
 
 # Chia usernames thành 10 danh sách dựa trên tên danh sách
 def split_usernames(usernames, num_lists=10):
@@ -63,18 +72,18 @@ def main():
     args = parse_args()
     output = args.username
     
-    url = "https://raw.githubusercontent.com/anisidina29/tiktok-live-recorder/main/usernames.txt"
+    #url = "https://raw.githubusercontent.com/anisidina29/tiktok-live-recorder/main/usernames.txt"
     output_file = "./src/usernames.txt"
 
-    response = requests.get(url)
+    # response = requests.get(url)
     
-    if response.status_code == 200:
-        with open(output_file, "w", encoding="utf-8") as file:
-            file.write(response.text)
-        print(f"File downloaded successfully and saved as {output_file}")
-    else:
-        print(f"Failed to download file. Status code: {response.status_code}")
-        sys.exit(1)
+    # if response.status_code == 200:
+    #     with open(output_file, "w", encoding="utf-8") as file:
+    #         file.write(response.text)
+    #     print(f"File downloaded successfully and saved as {output_file}")
+    # else:
+    #     print(f"Failed to download file. Status code: {response.status_code}")
+    #     sys.exit(1)
 
     # Đọc usernames từ file TXT
     usernames = load_usernames(output_file)
