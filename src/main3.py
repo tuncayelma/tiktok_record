@@ -79,12 +79,16 @@ def main():
     usernames = load_usernames(output_file)
 
     # Chia usernames thành 10 danh sách
-    username_lists = split_usernames(usernames)
+    username_lists = split_usernames(usernames, num_lists=9)
 
     # Tạo mapping giữa tên danh sách và chỉ số danh sách
+    # username_map = {
+    #     'usernames1': 0, 'usernames2': 1, 'usernames3': 2, 'usernames4': 3, 'usernames5': 4,
+    #     'usernames6': 5, 'usernames7': 6, 'usernames8': 7, 'usernames9': 8, 'usernames10': 9
+    # }
     username_map = {
         'usernames1': 0, 'usernames2': 1, 'usernames3': 2, 'usernames4': 3, 'usernames5': 4,
-        'usernames6': 5, 'usernames7': 6, 'usernames8': 7, 'usernames9': 8, 'usernames10': 9
+        'usernames6': 5, 'usernames7': 6, 'usernames8': 7, 'usernames9': 8
     }
 
     # Lấy danh sách các username từ đối số dòng lệnh
