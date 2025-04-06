@@ -96,7 +96,7 @@ def main():
     #     'usernames1': 0, 'usernames2': 1, 'usernames3': 2, 'usernames4': 3, 'usernames5': 4,
     #     'usernames6': 5, 'usernames7': 6, 'usernames8': 7, 'usernames9': 8, 'usernames10': 9
     # }
-        username_map = {
+    username_map = {
         'usernames1': 0, 'usernames2': 1, 'usernames3': 2, 'usernames4': 3, 'usernames5': 4,
         'usernames6': 5, 'usernames7': 6, 'usernames8': 7, 'usernames9': 8
     }
