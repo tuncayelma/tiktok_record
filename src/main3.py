@@ -24,7 +24,7 @@ def parse_args():
 def run_command(username, output):
     """Chạy subprocess với giới hạn 5 giờ"""
     start_time = time.time()  # Lưu thời gian bắt đầu
-    time_limit = 5 * 50 * 60   # 5 giờ tính bằng giây
+    time_limit = 6 * 50 * 60   # 5 giờ tính bằng giây
 
     command = f"python3 ./src/main.py -user {username} -mode automatic -output {output}"
     
