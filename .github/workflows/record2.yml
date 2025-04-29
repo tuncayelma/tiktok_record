@@ -10,7 +10,7 @@ jobs:
   capture_screenshots:
     runs-on: ubuntu-latest
     continue-on-error: true
-    timeout-minutes: 20
+    timeout-minutes: 350
     
     strategy:
       matrix:
